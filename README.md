@@ -18,11 +18,11 @@ Presentation is based on bootstrap.
 
 Compile the code using `browserify` with the `stringify` transform
 
-    npm install vue-pagination
+    npm install v-pagination
 
 Require the script:
 
-    var VuePagination = require('vue-pagination');
+    var VuePagination = require('v-pagination');
 
 ## Option 2
 
