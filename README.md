@@ -26,7 +26,7 @@ Require the script:
 
 ## Option 2
 
-Import the [compiled standalone file](https://raw.githubusercontent.com/matfish2/vue-pagination/master/dist/vue-pagination.min.js) into your HTML, which will expose a global `VueTables` variable.
+Import the [compiled standalone file](https://raw.githubusercontent.com/matfish2/vue-pagination/master/dist/vue-pagination.min.js) into your HTML, which will expose a global `VuePagination` variable.
 
 # Usage
 
