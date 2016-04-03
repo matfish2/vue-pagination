@@ -30,6 +30,8 @@ Import the [compiled standalone file](https://raw.githubusercontent.com/matfish2
 
 # Usage
 
+[LIVE DEMO](https://jsfiddle.net/matfish2/rnw8jjs3/)
+
 ## Register the component(s)
 
     Vue.use(VuePagination)
