@@ -6,7 +6,6 @@ Presentation is based on bootstrap.
 - [Dependencies](#dependencies)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Options](#options)
 
 # Dependencies
 
@@ -33,11 +32,11 @@ Import the [compiled standalone file](https://raw.githubusercontent.com/matfish2
 
 ## Register the component(s)
 
-    Vue.use(VuePagination);
+    Vue.use(VuePagination)
 
 HTML:
 
-  <pagination for="some-entity" :records="500"></pagination>
+    <pagination for="some-entity" :records="500"></pagination>
 
 props:
 
@@ -50,7 +49,7 @@ props:
 When a page is selected an event will be dispatched, using the unique id for the component.
 Listen to it and respond accordingly:
 
-this.$on('vue-pagination::some-entity', function(page) {
-    // display the relevant records using the page param
-});
+      this.$on('vue-pagination::some-entity', function(page) {
+          // display the relevant records using the page param
+      });
 

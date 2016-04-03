@@ -9,7 +9,7 @@
     ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/matfish2/v-pagination"
+    "url": "https://github.com/matfish2/vue-pagination"
   },
   "files": [
     "src"
@@ -17,10 +17,15 @@
   "dependencies": {
     "vue": ">=1.0"
   },
+    "browserify": {
+    "transform": [
+      "stringify"
+    ]
+  },
   "licenses": "MIT",
   "main": "index.js",
   "scripts": {
-    "build-min": "browserify index.js --s VueTables | uglifyjs -c > dist/v-pagination.min.js"
+    "build-min": "browserify index.js --s VuePagination | uglifyjs -c > dist/vue-pagination.min.js"
   },
   "devDependencies": {
     "jasmine-core": "^2.3.4",
