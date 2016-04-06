@@ -55,3 +55,10 @@ Listen to it and respond accordingly:
           // display the relevant records using the page param
       });
 
+# Programmatic Manipulation
+
+To programmatically set the page apply a `v-ref` identifier to the component and call `setPage` on it:
+
+    <pagination v-ref="pagination" for="some-entity" :records="500"></pagination>
+
+    this.$refs.pagination.setPage(1)
