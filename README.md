@@ -1,5 +1,8 @@
 # Vue Pagination
 
+Note: This package is for use with Vuejs 1.
+For version 2 please use [vue-pagination-2](https://www.npmjs.com/package/vue-pagination-2) instead.
+
 Simple, generic and non-intrusive pagination component for Vue.js.
 Presentation is based on bootstrap.
 
@@ -32,7 +35,7 @@ Import the [compiled standalone file](https://raw.githubusercontent.com/matfish2
 
 [LIVE DEMO](https://jsfiddle.net/matfish2/rnw8jjs3/)
 
-## Register the component(s)
+## Register the component
 
     Vue.use(VuePagination)
 
