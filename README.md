@@ -9,6 +9,8 @@ Presentation is based on bootstrap.
 - [Dependencies](#dependencies)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Programmatic Manipulation](#programmatic-manipulation)
+- [Computed Properties](#computed-properties)
 
 # Dependencies
 
@@ -60,9 +62,7 @@ Listen to it and respond accordingly:
 
 # Programmatic Manipulation
 
-To programmatically set the page apply a `v-ref` identifier to the component.
-
-Methods
+To programmatically set the page apply a `v-ref` identifier to the component and use one of the following methods:
 
 * `setPage(page)`
 * `next()`
@@ -71,3 +71,10 @@ Methods
 * `prevChunk()`
 
 All methods return `true` if the page is legal and was thus set, or `false` otherwise.
+
+# Computed Properties
+
+* `totalPages`
+* `totalChunks`
+* `currentChunk`
+
