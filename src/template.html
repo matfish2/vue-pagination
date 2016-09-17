@@ -5,14 +5,14 @@
   <li class="VuePagination__pagination-item VuePagination__pagination-item-prev-chunk"
   v-bind:class="allowedChunk(-1)?'':'disabled'">
   <a href="javascript:void(0);"
-  @click="allowedChunk(-1) && setChunk(-1)">&lt;&lt;</a>
+  @click="prevChunk()">&lt;&lt;</a>
 </li>
 
 
 <li class="VuePagination__pagination-item VuePagination__pagination-item-prev-page"
-v-bind:class="allowedPage(-1)?'':'disabled'">
+v-bind:class="allowedPage(page-1)?'':'disabled'">
 <a href="javascript:void(0);"
-@click="allowedPage(-1) && setPage(page-1)">&lt;</a>
+@click="prev()">&lt;</a>
 </li>
 
 <li class="VuePagination__pagination-item"
@@ -24,18 +24,18 @@ v-bind:class="isActive(paginationStart + $index - 1)?'active':''">
 </li>
 
 <li class="VuePagination__pagination-item VuePagination__pagination-item-next-page"
-v-bind:class="allowedPage(1)?'':'disabled'">
+v-bind:class="allowedPage(page + 1)?'':'disabled'">
 <a href="javascript:void(0);"
-@click="allowedPage(1) && setPage(page+1)">&gt;</a>
+@click="next()">&gt;</a>
 </li>
 
 <li class="VuePagination__pagination-item VuePagination__pagination-item-next-chunk"
 v-bind:class="allowedChunk(1)?'':'disabled'">
 <a href="javascript:void(0);"
-@click="allowedChunk(1) && setChunk(1)">&gt;&gt;</a>
+@click="nextChunk()">&gt;&gt;</a>
 </li>
 </ul>
 
-<p v-if="records"
+<p v-if="records>0"
 class="VuePagination__count">{{count}}</p>
 </div>

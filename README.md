@@ -60,8 +60,14 @@ Listen to it and respond accordingly:
 
 # Programmatic Manipulation
 
-To programmatically set the page apply a `v-ref` identifier to the component and call `setPage` on it:
+To programmatically set the page apply a `v-ref` identifier to the component.
 
-    <pagination v-ref:pagination for="some-entity" :records="500"></pagination>
+Methods
 
-    this.$refs.pagination.setPage(1)
+* `setPage(page)`
+* `next()`
+* `prev()`
+* `nextChunk()`
+* `prevChunk()`
+
+All methods return `true` if the page is legal and was thus set, or `false` otherwise.
