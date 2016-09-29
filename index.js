@@ -31,7 +31,11 @@ exports.install = function(Vue) {
   },
   computed: {
     pages: function() {
-      return range(1,this.chunk);
+
+      if (!this.records)
+        return [];
+
+      return range(this.paginationStart, this.pagesInCurrentChunk);
     },
     totalPages: function() {
       return Math.ceil(this.records / this.perPage);
@@ -47,6 +51,11 @@ exports.install = function(Vue) {
    },
    count: function() {
     return this.countText.replace('{count}', this.records);
+  },
+  pagesInCurrentChunk: function() {
+    return this.paginationStart + this.chunk < this.totalPages?
+                         this.chunk:
+                         this.totalPages - this.paginationStart + 1;
   }
 },
 methods: {
@@ -81,8 +90,8 @@ methods: {
     return (direction==1 && this.currentChunk<this.totalChunks)
     ||  (direction==-1 && this.currentChunk>1);
   },
-  isActive: function(index) {
-    return this.page==(index+1);
+  isActive: function(page) {
+    return this.page==page;
   }
 }
 });

@@ -17,10 +17,9 @@ v-bind:class="allowedPage(page-1)?'':'disabled'">
 
 <li class="VuePagination__pagination-item"
 v-for="page in pages"
-v-if="paginationStart + (page-1) <= totalPages"
-v-bind:class="isActive(paginationStart + $index - 1)?'active':''">
+v-bind:class="isActive(page)?'active':''">
 <a href="javascript:void(0);"
-@click="setPage(paginationStart + $index)">{{paginationStart + $index}}</a>
+@click="setPage(page)">{{page}}</a>
 </li>
 
 <li class="VuePagination__pagination-item VuePagination__pagination-item-next-page"
