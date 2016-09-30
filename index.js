@@ -38,7 +38,7 @@ exports.install = function(Vue) {
       return range(this.paginationStart, this.pagesInCurrentChunk);
     },
     totalPages: function() {
-      return Math.ceil(this.records / this.perPage);
+      return this.records?Math.ceil(this.records / this.perPage):1;
     },
     totalChunks: function() {
       return Math.ceil(this.totalPages / this.chunk);
