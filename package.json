@@ -18,9 +18,7 @@
     "vue": ">=1.0"
   },
     "browserify": {
-    "transform": [
-      "stringify"
-    ]
+
   },
   "licenses": "MIT",
   "main": "index.js",

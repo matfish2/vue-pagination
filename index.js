@@ -53,7 +53,7 @@ exports.install = function(Vue) {
     return this.countText.replace('{count}', this.records);
   },
   pagesInCurrentChunk: function() {
-    return this.paginationStart + this.chunk < this.totalPages?
+    return this.paginationStart + this.chunk <= this.totalPages?
                          this.chunk:
                          this.totalPages - this.paginationStart + 1;
   }
