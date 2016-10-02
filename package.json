@@ -1,7 +1,7 @@
 {
   "name": "v-pagination",
   "description": "Vue.js pagination component",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": [
     "pagination",
     "vue",
@@ -18,7 +18,9 @@
     "vue": ">=1.0"
   },
     "browserify": {
-
+    "transform": [
+      "stringify"
+    ]
   },
   "licenses": "MIT",
   "main": "index.js",
