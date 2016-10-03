@@ -13,13 +13,16 @@ exports.install = function(Vue) {
       required: true
     },
     records: {
+      type: Number,
       required: true
     },
     perPage: {
+      type: Number,
       required: false,
       default: 25
     },
     chunk: {
+      type: Number,
       required: false,
       default: 10
     },
@@ -30,9 +33,6 @@ exports.install = function(Vue) {
     }
   },
   computed: {
-    Chunk: function() {
-      return parseInt(this.chunk);
-    },
     pages: function() {
 
       if (!this.records)
@@ -44,20 +44,20 @@ exports.install = function(Vue) {
       return this.records?Math.ceil(this.records / this.perPage):1;
     },
     totalChunks: function() {
-      return Math.ceil(this.totalPages / this.Chunk);
+      return Math.ceil(this.totalPages / this.chunk);
     },
     currentChunk: function() {
-      return Math.ceil(this.page / this.Chunk);
+      return Math.ceil(this.page / this.chunk);
     },
     paginationStart: function() {
-     return ((this.currentChunk-1) * this.Chunk) + 1;
+     return ((this.currentChunk-1) * this.chunk) + 1;
    },
    count: function() {
     return this.countText.replace('{count}', this.records);
   },
   pagesInCurrentChunk: function() {
-    return this.paginationStart + this.Chunk <= this.totalPages?
-                         this.Chunk:
+    return this.paginationStart + this.chunk <= this.totalPages?
+                         this.chunk:
                          this.totalPages - this.paginationStart + 1;
   }
 },
@@ -84,7 +84,7 @@ methods: {
     return this.setChunk(-1);
   },
   setChunk: function(direction) {
-    this.setPage((((this.currentChunk -1) + direction) * this.Chunk) + 1);
+    this.setPage((((this.currentChunk -1) + direction) * this.chunk) + 1);
   },
   allowedPage: function(page) {
     return page>=1 && page<=this.totalPages;
